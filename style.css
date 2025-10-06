@@ -1,0 +1,168 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página */
+body {
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+/* Container centralizado */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.btn-primary {
+  padding: 12px 18px;
+  background-color: #6c63ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.btn-primary::before {
+  content: "+ "; /* símbolo de adicionar */
+}
+
+.btn-primary:hover {
+  background-color: #574fd6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabela */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Botões de ação com símbolos */
+.actions a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-right: 5px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Botão Editar */
+.btn-edit {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-edit::before {
+  content: "✎ "; /* símbolo de lápis */
+}
+
+.btn-edit:hover {
+  background-color: #218838;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão Excluir */
+.btn-delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-delete::before {
+  content: "🗑 "; /* símbolo de lixeira */
+}
+
+.btn-delete:hover {
+  background-color: #b02a37;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensagem quando não há usuários */
+p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+p a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+p a:hover {
+  color: #574fd6;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #888;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .actions a {
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página */
+body {
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Caixa do formulário */
+.container {
+  background: #fff;
+  padding: 35px 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Título */
+.container h1 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+label {
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  outline: none;
+}
+
+/* Botão Salvar com símbolo de check */
+.btn {
+  padding: 12px;
+  background-color: #6c63ff;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn::before {
+  content: "✔ "; /* Símbolo de check */
+  margin-right: 5px;
+}
+
+.btn:hover {
+  background-color: #574fd6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão Voltar com símbolo de seta */
+.btn-voltar {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #6c63ff;
+  text-decoration: none;
+  color: #6c63ff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.btn-voltar::before {
+  content: "↩ "; /* Símbolo de voltar */
+  margin-right: 5px;
+}
+
+.btn-voltar:hover {
+  background-color: #6c63ff;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo */
+@media (max-width: 450px) {
+  .container {
+    padding: 25px;
+  }
+}
